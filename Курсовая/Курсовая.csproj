@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{16E5BAD9-7D81-41C4-B49B-33261C700B74}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Курсовая</RootNamespace>
+    <AssemblyName>Курсовая</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Database\Brand.cs" />
+    <Compile Include="Database\Car.cs" />
+    <Compile Include="Database\Carcase.cs" />
+    <Compile Include="Database\Client.cs" />
+    <Compile Include="Database\Contract.cs" />
+    <Compile Include="Database\Dealer.cs" />
+    <Compile Include="Database\Model.cs" />
+    <Compile Include="Database\Photo_car.cs" />
+    <Compile Include="Database\State.cs" />
+    <Compile Include="Database\sysdiagrams.cs" />
+    <Compile Include="Database\UsedCars.cs" />
+    <Compile Include="Forms\ActionAuthorizationAForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ActionAuthorizationAForm.Designer.cs">
+      <DependentUpon>ActionAuthorizationAForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ActionAuthorizationDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ActionAuthorizationDForm.Designer.cs">
+      <DependentUpon>ActionAuthorizationDForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddBrandForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddBrandForm.Designer.cs">
+      <DependentUpon>AddBrandForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddCarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddCarForm.Designer.cs">
+      <DependentUpon>AddCarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddDealerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddDealerForm.Designer.cs">
+      <DependentUpon>AddDealerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddModelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddModelForm.Designer.cs">
+      <DependentUpon>AddModelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddTypeCarcaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddTypeCarcaseForm.Designer.cs">
+      <DependentUpon>AddTypeCarcaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ClientForm.Designer.cs">
+      <DependentUpon>ClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DeleteBrandForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DeleteBrandForm.Designer.cs">
+      <DependentUpon>DeleteBrandForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DeleteCarcaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DeleteCarcaseForm.Designer.cs">
+      <DependentUpon>DeleteCarcaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DeleteCarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DeleteCarForm.Designer.cs">
+      <DependentUpon>DeleteCarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DeleteClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DeleteClientForm.Designer.cs">
+      <DependentUpon>DeleteClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DeleteContractForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DeleteContractForm.Designer.cs">
+      <DependentUpon>DeleteContractForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DeleteUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DeleteUserForm.Designer.cs">
+      <DependentUpon>DeleteUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AuthorizationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AuthorizationForm.Designer.cs">
+      <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\makeDealForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\makeDealForm.Designer.cs">
+      <DependentUpon>makeDealForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StatisticsYearForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StatisticsYearForm.Designer.cs">
+      <DependentUpon>StatisticsYearForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TablesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TablesForm.Designer.cs">
+      <DependentUpon>TablesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserForm.Designer.cs">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpFunction.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Used_carDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Used_carDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\ActionAuthorizationAForm.resx">
+      <DependentUpon>ActionAuthorizationAForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ActionAuthorizationDForm.resx">
+      <DependentUpon>ActionAuthorizationDForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddBrandForm.resx">
+      <DependentUpon>AddBrandForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddCarForm.resx">
+      <DependentUpon>AddCarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddDealerForm.resx">
+      <DependentUpon>AddDealerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddModelForm.resx">
+      <DependentUpon>AddModelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddTypeCarcaseForm.resx">
+      <DependentUpon>AddTypeCarcaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AuthorizationForm.resx">
+      <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ClientForm.resx">
+      <DependentUpon>ClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DeleteBrandForm.resx">
+      <DependentUpon>DeleteBrandForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DeleteCarcaseForm.resx">
+      <DependentUpon>DeleteCarcaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DeleteCarForm.resx">
+      <DependentUpon>DeleteCarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DeleteClientForm.resx">
+      <DependentUpon>DeleteClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DeleteContractForm.resx">
+      <DependentUpon>DeleteContractForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DeleteUserForm.resx">
+      <DependentUpon>DeleteUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\makeDealForm.resx">
+      <DependentUpon>makeDealForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StatisticsYearForm.resx">
+      <DependentUpon>StatisticsYearForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TablesForm.resx">
+      <DependentUpon>TablesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Used_carDataSet.xsc">
+      <DependentUpon>Used_carDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Used_carDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Used_carDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Used_carDataSet.xss">
+      <DependentUpon>Used_carDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
